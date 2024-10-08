@@ -12,7 +12,7 @@ export function ListSessionsStudent() {
 
   return (
     <div className="flex-1 flex flex-col justify-center items-center">
-      <div className="p-8 border-2 border-rose-500 bg-zinc-700 w-1/2 text-white space-y-8">
+      <div className="p-8 border-2 border-rose-500 w-1/2 text-white space-y-8">
         <h1 className="text-5xl">Sessões:</h1>
 
         {data?.sessions && data?.sessions.length > 0 && (

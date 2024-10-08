@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom"
 
 import { Layout } from "./components/layout"
-import { Login } from "./pages/login"
+import { Login } from "./pages/login/login"
 import { ChooseScreen } from "./pages/professor/choose-screen"
 import { ListSessions } from "./pages/professor/list-sessions"
 import { RegisterBoosts } from "./pages/professor/register-boosts"

@@ -14,7 +14,7 @@ export function ListTeams() {
 
   return (
     <div className="flex-1 flex flex-col justify-center items-center">
-      <div className="p-8 border-2 border-rose-500 bg-zinc-700 w-1/2 text-white space-y-8">
+      <div className="p-8 border-2 border-rose-500 w-1/2 text-white space-y-8">
         <h1 className="text-5xl">Equipes:</h1>
 
         {data?.teams && data?.teams.length > 0 && (
