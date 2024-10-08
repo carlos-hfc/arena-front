@@ -8,7 +8,7 @@ export function Login() {
   return (
     <div className="h-dvh bg-zinc-800 flex flex-col items-center justify-center gap-12">
       <Button onClick={() => navigate("/choose-screen")}>Professor</Button>
-      <Button>Aluno</Button>
+      <Button onClick={() => navigate("/student/sessions")}>Aluno</Button>
       <Button>Painel</Button>
     </div>
   )
