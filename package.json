@@ -13,6 +13,7 @@
     "@tanstack/react-query": "^5.59.0",
     "arena-front": "file:",
     "axios": "^1.7.7",
+    "js-cookie": "^3.0.5",
     "lucide-react": "^0.446.0",
     "path": "^0.12.7",
     "react": "^18.3.1",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@ch-faustino/eslint-config": "^1.0.1",
+    "@types/js-cookie": "^3.0.6",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

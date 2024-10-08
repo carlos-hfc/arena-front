@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom"
 
-import { ProfessorLayout } from "./components/layout"
+import { Layout } from "./components/layout"
 import { Login } from "./pages/login"
 import { ChooseScreen } from "./pages/professor/choose-screen"
 import { ListSessions } from "./pages/professor/list-sessions"
@@ -9,11 +9,14 @@ import { RegisterCards } from "./pages/professor/register-cards"
 import { RegisterGoals } from "./pages/professor/register-goals"
 import { RegisterSession } from "./pages/professor/register-session"
 import { Session } from "./pages/professor/session"
+import { ListSessionsStudent } from "./pages/student/list-sessions"
+import { ListTeams } from "./pages/student/list-teams"
+import { RegisterStudent } from "./pages/student/register"
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <ProfessorLayout />,
+    element: <Layout />,
     children: [
       {
         index: true,
@@ -51,6 +54,18 @@ export const router = createBrowserRouter([
             element: <RegisterBoosts />,
           },
         ],
+      },
+      {
+        path: "student/sessions",
+        element: <ListSessionsStudent />,
+      },
+      {
+        path: "/student/sessions/:sessionId/teams",
+        element: <ListTeams />,
+      },
+      {
+        path: "student/sessions/:sessionId/teams/:teamId/register",
+        element: <RegisterStudent />,
       },
     ],
   },
