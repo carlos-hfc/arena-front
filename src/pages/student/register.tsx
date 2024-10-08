@@ -13,7 +13,10 @@ const INITIAL_STATE = {
 }
 
 export function RegisterStudent() {
-  const { teamId } = useParams() as { teamId: string }
+  const { teamId, sessionId } = useParams() as {
+    teamId: string
+    sessionId: string
+  }
 
   const [student, setStudent] = useState(INITIAL_STATE)
 
@@ -67,7 +70,9 @@ export function RegisterStudent() {
         </form>
       </div>
 
-      <BackButton to="/">Voltar</BackButton>
+      <BackButton to={`/student/sessions/${sessionId}/teams`}>
+        Voltar
+      </BackButton>
     </div>
   )
 }

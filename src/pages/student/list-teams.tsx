@@ -32,7 +32,7 @@ export function ListTeams() {
         )}
       </div>
 
-      <BackButton to="/">Voltar</BackButton>
+      <BackButton to="/student/sessions">Voltar</BackButton>
     </div>
   )
 }
