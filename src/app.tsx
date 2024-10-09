@@ -12,6 +12,7 @@ import { Session } from "./pages/professor/session"
 import { ListSessionsStudent } from "./pages/student/list-sessions"
 import { ListTeams } from "./pages/student/list-teams"
 import { RegisterStudent } from "./pages/student/register"
+import { SendGoal } from "./pages/student/send-goal"
 
 export const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ export const router = createBrowserRouter([
       {
         path: "student/sessions/:sessionId/teams/:teamId/register",
         element: <RegisterStudent />,
+      },
+      {
+        path: "student/sessions/:sessionId/teams/:teamId/goals",
+        element: <SendGoal />,
       },
     ],
   },
