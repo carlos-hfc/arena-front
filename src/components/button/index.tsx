@@ -4,9 +4,17 @@ import { cn } from "@/utils/cn"
 
 import { ButtonContainer } from "./styles"
 
-export function Button({ className, ...props }: ComponentProps<"button">) {
+interface ButtonProps extends ComponentProps<"button"> {
+  containerClassName?: string
+}
+
+export function Button({
+  className,
+  containerClassName,
+  ...props
+}: ButtonProps) {
   return (
-    <ButtonContainer>
+    <ButtonContainer className={cn(containerClassName)}>
       <span className="state-indicator" />
       <span className="button-bg" />
       <button
