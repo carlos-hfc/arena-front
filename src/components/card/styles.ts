@@ -37,12 +37,6 @@ export const CardContainer = styled.div`
   }
 `
 
-export const Information = styled.p`
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-`
-
 export const Label = styled.span`
   font-size: 1.5rem;
   text-shadow: 0px 0px 10px #31cbf4;

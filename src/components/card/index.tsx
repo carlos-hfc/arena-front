@@ -3,7 +3,7 @@ import { ComponentProps } from "react"
 import cardBorder from "@/assets/card-border.png"
 import team from "@/assets/team-icon.svg"
 
-import { CardBorder, CardContainer, Information, Label, Value } from "./styles"
+import { CardBorder, CardContainer } from "./styles"
 
 export function Card({ className, ...props }: ComponentProps<"div">) {
   return (
@@ -17,20 +17,8 @@ export function Card({ className, ...props }: ComponentProps<"div">) {
         src={team}
         alt="Ícone azul representando um time de 3 pessoas"
       />
-      <Information>
-        <Label>Equipe 01</Label>
-        <Value style={{ fontSize: "6rem" }}>150</Value>
-      </Information>
 
-      <Information>
-        <Label>Objetivo: </Label>
-        <Value>01</Value>
-      </Information>
-
-      <Information>
-        <Label>Cards: </Label>
-        <Value>01</Value>
-      </Information>
+      {props.children}
 
       <CardBorder
         src={cardBorder}
