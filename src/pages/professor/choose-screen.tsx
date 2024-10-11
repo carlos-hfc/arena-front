@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
+import { BackButton } from "@/components/back-button"
 import { Button } from "@/components/button"
 
 export function ChooseScreen() {
@@ -11,6 +12,8 @@ export function ChooseScreen() {
         Criar sessão
       </Button>
       <Button onClick={() => navigate("/list-sessions")}>Entrar</Button>
+
+      <BackButton to="/" />
     </div>
   )
 }

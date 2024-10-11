@@ -12,7 +12,7 @@ export function Login() {
     <LoginWrapper className="h-dvh flex flex-col gap-12">
       <Button onClick={() => navigate("/choose-screen")}>Professor</Button>
       <Button onClick={() => navigate("/student/sessions")}>Aluno</Button>
-      <Button>Painel</Button>
+      <Button onClick={() => navigate("/panel/sessions")}>Painel</Button>
 
       {/* <img src={gif} /> */}
     </LoginWrapper>

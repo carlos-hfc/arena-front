@@ -6,3 +6,18 @@
   font-family: "Neuropol";
   src: local("Neuropol"), url("./fonts/neuropol.otf");
 }
+
+.text-shadow {
+  text-shadow: 0px 0px 10px #31cbf4;
+  color: #31cbf4;
+}
+
+.text-shadow-pink {
+  text-shadow: 0px 0px 10px #CA3C63;
+  color: #CA3C63;
+}
+
+.text-shadow-yellow {
+  text-shadow: 0px 0px 10px #FDD125;
+  color: #FDD125;
+}

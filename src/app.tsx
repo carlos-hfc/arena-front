@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom"
 
 import { Layout } from "./components/layout"
-import { Login } from "./pages/login/login"
+import { ListSessions } from "./pages/list-sessions"
+import { Login } from "./pages/login"
+import { Panel } from "./pages/panel"
 import { ChooseScreen } from "./pages/professor/choose-screen"
-import { ListSessions } from "./pages/professor/list-sessions"
 import { RegisterBoosts } from "./pages/professor/register-boosts"
 import { RegisterCards } from "./pages/professor/register-cards"
 import { RegisterGoals } from "./pages/professor/register-goals"
@@ -27,8 +28,16 @@ export const router = createBrowserRouter([
         element: <ChooseScreen />,
       },
       {
+        path: "panel/sessions",
+        element: <ListSessions viewMode="panel" />,
+      },
+      {
+        path: "panel/sessions/:sessionId",
+        element: <Panel />,
+      },
+      {
         path: "list-sessions",
-        element: <ListSessions />,
+        element: <ListSessions viewMode="professor" />,
       },
       {
         path: "register-session",
