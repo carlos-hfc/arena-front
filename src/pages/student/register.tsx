@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 import { BackButton } from "@/components/back-button"
 import { Button } from "@/components/button"
@@ -13,6 +13,7 @@ const INITIAL_STATE = {
 }
 
 export function RegisterStudent() {
+  const navigate = useNavigate()
   const { teamId, sessionId } = useParams() as {
     teamId: string
     sessionId: string
@@ -27,6 +28,8 @@ export function RegisterStudent() {
   async function handleRegisterStudent(event: FormEvent) {
     event.preventDefault()
 
+    if (!student.name || !student.rm) return
+
     try {
       const { token } = await registerStudent({
         name: student.name,
@@ -35,6 +38,8 @@ export function RegisterStudent() {
       })
 
       setToken(token)
+
+      navigate(`/student/sessions/${sessionId}/teams/${teamId}/goals`)
     } catch (error) {}
   }
 
@@ -44,7 +49,7 @@ export function RegisterStudent() {
         <h1 className="text-5xl text-center">Digite nome e RM:</h1>
 
         <form
-          className="space-y-4"
+          className="space-y-6"
           onSubmit={handleRegisterStudent}
         >
           <div className="flex flex-col justify-center items-center gap-2">
@@ -66,7 +71,7 @@ export function RegisterStudent() {
             />
           </div>
 
-          <Button className="mx-auto">Start</Button>
+          <Button containerClassName="w-min mx-auto">Start</Button>
         </form>
       </div>
 
