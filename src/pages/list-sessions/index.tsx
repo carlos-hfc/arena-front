@@ -3,6 +3,7 @@ import { Star } from "lucide-react"
 
 import lockGif from "@/assets/lock.gif"
 import radarGif from "@/assets/radar.gif"
+import bgGif from "@/assets/particles2.gif"
 import { BackButton } from "@/components/back-button"
 import { listReleasedSessions } from "@/services/list-released-sessions"
 import { listSessions } from "@/services/list-sessions"
@@ -10,6 +11,7 @@ import { listSessions } from "@/services/list-sessions"
 import {
   IconWrapper,
   PageWrapper,
+  ParticlesGif,
   RadarGif,
   SessionName,
   SessionsContainer,
@@ -27,6 +29,10 @@ export function ListSessions({ viewMode }: SessionsProps) {
 
   return (
     <PageWrapper className="flex-1 flex flex-col justify-center items-center">
+      <ParticlesGif
+        src={bgGif}
+        alt="Ilustração de partículas em movimento"
+      />
       <div className="flex justify-center items-center gap-4">
         <h1 className="text-4xl text-shadow-yellow">Sessão</h1>
         <img
@@ -73,7 +79,6 @@ export function ListSessions({ viewMode }: SessionsProps) {
           )}
         </div>
       </SessionsContainer>
-
       <BackButton to="/choose-screen" />
     </PageWrapper>
   )

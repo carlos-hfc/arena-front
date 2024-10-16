@@ -4,6 +4,7 @@ interface Session {
   id: string
   name: string
   releasedAt: string | null
+  panelId: string | null
   teams: {
     id: string
     sessionId: string

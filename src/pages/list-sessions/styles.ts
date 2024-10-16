@@ -6,8 +6,22 @@ import bgScrollTrack from "@/assets/scroll-track.svg"
 import bgContainer from "@/assets/sessions-background.png"
 
 export const PageWrapper = styled.div`
-  min-height: 1000px;
-  overflow-x: auto;
+  min-height: 800px;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: 1300px) {
+    min-height: 500px;
+  }
+`
+
+export const ParticlesGif = styled.img`
+  mix-blend-mode: lighten;
+  position: absolute;
+  right: -35%;
+  top: 20%;
+  filter: grayscale(50%);
+  filter: opacity(25%);
 `
 
 export const SessionsContainer = styled.main`
@@ -17,11 +31,13 @@ export const SessionsContainer = styled.main`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 
   @media screen and (max-width: 1300px) {
     background-image: none;
     min-width: unset;
     min-height: unset;
+    height: auto;
     box-shadow: 0px 4px 100px 1px rgba(49, 203, 244, 0.3) inset;
     margin-top: 2rem;
 
@@ -89,6 +105,8 @@ export const RadarGif = styled.img`
   mix-blend-mode: lighten;
   position: absolute;
   transform: translate(40px, -150px);
+  z-index: 1;
+  -webkit-user-drag: none;
 
   @media screen and (max-width: 1300px) {
     display: none;

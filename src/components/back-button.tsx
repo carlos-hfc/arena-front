@@ -10,7 +10,7 @@ export const BackButton = forwardRef<
   return (
     <Link
       ref={ref}
-      className={cn("w-auto h-auto absolute left-12 bottom-12", className)}
+      className={cn("w-auto h-auto fixed left-12 bottom-12", className)}
       {...props}
     >
       <svg
